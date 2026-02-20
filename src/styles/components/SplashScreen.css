@@ -1,0 +1,81 @@
+/* ============================================
+   Splash Screen (BEM) — Intro overlay
+   ============================================ */
+
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a0a0a;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.splash--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Dot-grid background */
+.splash__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* Intro text */
+.splash__text {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-mono);
+  font-size: clamp(1.4rem, 3.5vw, 2.6rem);
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.02em;
+  padding: var(--space-xl);
+  animation: splash-typeIn 1.2s ease-out;
+}
+
+.splash__name {
+  color: #d4a853;
+  font-weight: 700;
+}
+
+@keyframes splash-typeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Blinking cursor after text */
+.splash__text::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 4px;
+  color: #d4a853;
+  animation: splash-blink 0.8s step-end infinite;
+}
+
+@keyframes splash-blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

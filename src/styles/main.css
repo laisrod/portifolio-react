@@ -13,6 +13,7 @@
 @import './components/Header.css';
 @import './components/ThemeToggle.css';
 @import './components/Footer.css';
+@import './components/SplashScreen.css';
 
 /* ---- Sections ---- */
 @import './components/Hero.css';
