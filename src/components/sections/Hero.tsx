@@ -1,31 +1,80 @@
-import Button from '../ui/Button'
+import { useRef, useCallback } from 'react'
+import { useSpring, animated, to } from '@react-spring/web'
 import Badge from '../ui/Badge'
 
 function Hero() {
+  const h1Ref = useRef<HTMLHeadingElement>(null)
+
+  const [springs, api] = useSpring(() => ({
+    x: 0,
+    y: 0,
+    opacity: 0,
+    config: { mass: 1, tension: 280, friction: 40 },
+  }))
+
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent<HTMLElement>) => {
+      const h1 = h1Ref.current
+      if (!h1) return
+      const rect = h1.getBoundingClientRect()
+      api.start({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+        opacity: 1,
+      })
+    },
+    [api]
+  )
+
+  const handleMouseLeave = useCallback(() => {
+    api.start({ opacity: 0 })
+  }, [api])
+
   return (
-    <section className="hero" id="hero">
+    <section
+      className="hero"
+      id="hero"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="hero__overlay" aria-hidden="true" />
       <div className="container hero__container">
-        <div className="hero__content">
-          <p className="hero__greeting">Hi, I'm</p>
-          <h1 className="hero__name">
-            Laís Rodrigues<span className="hero__name--accent">.</span>
-          </h1>
-          <h2 className="hero__title">Full Stack Developer</h2>
-          <p className="hero__description">
-            I build scalable, user-centric web applications with{' '}
-            <strong>React</strong>, <strong>TypeScript</strong>,{' '}
-            <strong>Ruby on Rails</strong> &amp; <strong>Node.js</strong>.
-            Passionate about clean architecture, real-time features, and
-            delivering high-quality code.
-          </p>
-          <div className="hero__cta-group">
-            <Button href="#projects" variant="primary">
-              View My Work
-            </Button>
-            <Button href="#contact" variant="secondary">
-              Get In Touch
-            </Button>
+        {/* Spotlight layer — radial gold gradient clipped to text */}
+        <animated.h1
+          className="hero__statement"
+          ref={h1Ref}
+          style={{
+            backgroundImage: to(
+              [springs.x, springs.y, springs.opacity],
+              (x, y, o) =>
+                o > 0.1
+                  ? `radial-gradient(circle 400px at ${x}px ${y}px, #d4a853 0%, #b8892e 25%, #1a1a1a 70%)`
+                  : `radial-gradient(circle 400px at 50% 50%, #1a1a1a 0%, #1a1a1a 100%)`
+            ),
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+          }}
+        >
+          I enjoy building applications for the fun and challenge of it
+        </animated.h1>
+
+        {/* Static fallback for mobile (no mouse) */}
+        <h1 className="hero__statement hero__statement--mobile" aria-hidden="true">
+          I enjoy <span className="hero__statement--gold">building</span>{' '}
+          <span className="hero__statement--gold">applications</span> for the{' '}
+          <span className="hero__statement--gold">fun</span>{' '}
+          <span className="hero__statement--gold">and</span>{' '}
+          <span className="hero__statement--gold">challenge</span> of it
+        </h1>
+
+        <div className="hero__bottom">
+          <div className="hero__info">
+            <p className="hero__name">Laís Rodrigues</p>
+            <p className="hero__title">Full Stack Developer</p>
+            <Badge variant="status">Open to work</Badge>
           </div>
+
           <div className="hero__social">
             <a
               href="https://github.com/laisrod"
@@ -60,13 +109,6 @@ function Hero() {
               </svg>
             </a>
           </div>
-        </div>
-
-        <div className="hero__visual">
-          <div className="hero__avatar">
-            <span className="hero__avatar-text" aria-hidden="true">LR</span>
-          </div>
-          <Badge variant="status">Open to work</Badge>
         </div>
       </div>
     </section>
