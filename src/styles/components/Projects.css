@@ -1,21 +1,43 @@
 /* ============================================
-   Projects Block (BEM)
+   Projects Block (BEM) — Terminal style
    ============================================ */
 
 .projects {
-  background-color: var(--color-bg-secondary);
+  background-color: #000000;
 }
 
+/* Title with terminal ./ prefix */
+.projects__title {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xl);
+  letter-spacing: -0.02em;
+}
+
+/* Intro paragraph */
+.projects__intro {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.9;
+  max-width: 820px;
+  margin-bottom: var(--space-3xl);
+}
+
+/* Grid — 2x2 for 4 projects */
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-xl);
+  max-width: 900px;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
   .projects__grid {
     grid-template-columns: 1fr;
-    max-width: 600px;
+    max-width: 480px;
   }
 }
