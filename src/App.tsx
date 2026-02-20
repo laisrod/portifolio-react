@@ -9,6 +9,7 @@ import Skills from './components/sections/Skills'
 import Projects from './components/sections/Projects'
 import Contact from './components/sections/Contact'
 import CrossGrid from './components/common/CrossGrid'
+import MarqueeText from './components/common/MarqueeText'
 
 function App() {
   const { theme, toggleTheme } = useTheme()
@@ -30,6 +31,7 @@ function App() {
         <Projects />
         <Contact />
       </main>
+      <MarqueeText />
       <CrossGrid />
       <Footer />
     </>

@@ -1,8 +1,6 @@
-/* ============================================
-   Skills Block (BEM) — Terminal / Monospace style
-   ============================================ */
-
 .skills {
+  position: relative;
+  z-index: 2;
   background-color: var(--color-bg-primary);
 }
 
