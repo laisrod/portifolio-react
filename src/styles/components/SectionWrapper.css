@@ -31,3 +31,13 @@
   transform: translateY(0);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
+/* Mobile: stack content in column and center */
+@media (max-width: 1024px) {
+  .section__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
