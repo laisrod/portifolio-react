@@ -1,52 +1,34 @@
 /* ============================================
-   Skills Block (BEM)
+   Skills Block (BEM) — Terminal / Monospace style
    ============================================ */
 
 .skills {
-  background-color: var(--color-bg-primary);
+  background-color: #000000;
 }
 
-.skills__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-xl);
-}
-
-.skills__card-title {
-  font-size: var(--font-size-lg);
+/* Title with terminal ./ prefix */
+.skills__title {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-3xl);
   font-weight: 700;
-  color: var(--color-accent);
-  margin-bottom: var(--space-lg);
-  padding-bottom: var(--space-sm);
-  border-bottom: 2px solid var(--color-accent-light);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2xl);
+  letter-spacing: -0.02em;
 }
 
-.skills__list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
+/* Content — single column text */
+.skills__content {
+  max-width: 720px;
 }
 
-.skills__item {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
+.skills__paragraph {
+  font-family: var(--font-mono);
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
-  font-weight: 500;
+  line-height: 1.9;
+  margin-bottom: var(--space-xl);
 }
 
-.skills__item-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--color-accent);
-  flex-shrink: 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .skills__grid {
-    grid-template-columns: 1fr;
-  }
+.skills__paragraph:last-child {
+  margin-bottom: 0;
 }
