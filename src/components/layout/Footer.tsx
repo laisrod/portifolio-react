@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <div className="container footer__container">
         <p className="footer__text">
-          &copy; {currentYear} Laís Rodrigues. Built with React + TypeScript.
+          &copy; {currentYear} Laís Rodrigues. Built with React + TypeScript + Ruby on Rails.
         </p>
         <div className="footer__links">
           <a
