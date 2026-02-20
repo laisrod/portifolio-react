@@ -10,7 +10,7 @@ function About() {
         <div className="about__left">
           <div className="about__content">
             <p className="about__paragraph">
-              I'm Laís Rodrigues Lopes. I live in Barcelona, Spain. I've always
+              I'm Laís Rodrigues. I live in Barcelona, Spain. I've always
               been passionate about technology and the creative possibilities of
               the web. For me, building applications is both a mental exercise and
               a way to bring ideas to life — sometimes to solve real problems,
@@ -63,7 +63,7 @@ function About() {
         <div className="about__right">
           <img
             src={avatarImg}
-            alt="Laís Rodrigues Lopes"
+            alt="Laís Rodrigues"
             className="about__avatar"
             loading="lazy"
             width="200"
