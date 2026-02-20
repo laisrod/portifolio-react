@@ -64,28 +64,11 @@
   padding-top: var(--space-3xl);
 }
 
-/* ---- Desktop spotlight (animated h1) ---- */
-/* On devices with a mouse: show the animated version, hide static */
-@media (hover: hover) and (pointer: fine) {
-  .hero__statement--mobile {
-    display: none;
+/* Spotlight radius smaller on mobile */
+@media (max-width: 768px) {
+  .hero__statement {
+    touch-action: pan-y;
   }
-}
-
-/* ---- Mobile / touch fallback (static gold) ---- */
-/* On touch devices: hide the animated version, show gold static */
-@media (hover: none), (pointer: coarse) {
-  /* Hide the animated h1 (first child) */
-  .hero__statement:not(.hero__statement--mobile) {
-    display: none;
-  }
-}
-
-.hero__statement--gold {
-  background: linear-gradient(135deg, #d4a853, #c49032, #a67825);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* Bottom bar — name, title, badge, social */
@@ -95,6 +78,8 @@
   justify-content: space-between;
   margin-top: auto;
   padding-top: var(--space-3xl);
+  position: relative;
+  z-index: 5;
 }
 
 .hero__info {
@@ -133,12 +118,14 @@
   border-radius: var(--radius-md);
   color: var(--color-text-tertiary);
   border: 1px solid #333333;
-  transition: all var(--transition-fast);
+  transition: color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+  position: relative;
+  z-index: 5;
 }
 
 .hero__social-link:hover {
-  color: #d4a853;
-  border-color: #d4a853;
+  color: #f5c518;
+  border-color: #f5c518;
   transform: translateY(-2px);
 }
 

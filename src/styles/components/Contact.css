@@ -99,7 +99,8 @@
 }
 
 .contact__submit:hover {
-  opacity: 0.85;
+  background-color: #f5c518;
+  color: #111111;
   transform: translateY(-1px);
 }
 

@@ -77,12 +77,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #555555;
+  background-color: #f5c518;
   transition: width var(--transition-base);
 }
 
 .header__nav-link:hover {
-  color: var(--color-accent);
+  color: #f5c518;
 }
 
 .header__nav-link:hover::after {

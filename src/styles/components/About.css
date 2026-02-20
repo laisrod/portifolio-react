@@ -82,7 +82,7 @@
 }
 
 .about__social-link:hover {
-  color: var(--color-accent);
+  color: #f5c518;
   transform: translateY(-2px);
 }
 
