@@ -1,70 +1,67 @@
 import SectionWrapper from '../layout/SectionWrapper'
-import Badge from '../ui/Badge'
-
-const HIGHLIGHTS = [
-  { label: 'Location', value: 'Barcelona, Spain' },
-  { label: 'Availability', value: 'Hybrid / Remote' },
-  { label: 'Focus', value: 'Full Stack Development' },
-  { label: 'Languages', value: 'English · Portuguese · Spanish' },
-]
-
-const TECH_TAGS = [
-  'React',
-  'TypeScript',
-  'Ruby on Rails',
-  'Node.js',
-  'Redux Toolkit',
-  'REST APIs',
-  'PostgreSQL',
-  'Docker',
-  'Git / CI/CD',
-  'TDD',
-]
 
 function About() {
   return (
-    <SectionWrapper
-      id="about"
-      className="about"
-      subtitle="Get to know me"
-      title="About Me"
-    >
-      <div className="about__grid">
-        <div className="about__text">
-          <p className="about__paragraph">
-            Passionate about building <strong>scalable, user-centric applications</strong> that
-            solve real problems and improve daily workflows. I bring strong full-stack
-            experience with <strong>React + TypeScript</strong> on the frontend and{' '}
-            <strong>Ruby on Rails / Node.js</strong> on the backend.
-          </p>
-          <p className="about__paragraph">
-            Recent intensive bootcamps sharpened my skills in modern React patterns,
-            TypeScript strict typing, clean architecture, real-time features with
-            WebSockets, API integrations, <strong>TDD</strong>, and containerization
-            with Docker.
-          </p>
-          <p className="about__paragraph">
-            I thrive in collaborative, fast-paced environments and I'm eager to
-            contribute ownership, high-quality code, and a product mindset to
-            growing tech teams — whether remote or on-site in Barcelona.
-          </p>
+    <SectionWrapper id="about" className="about">
+      <h2 className="about__title">./About Me</h2>
 
-          <ul className="about__highlights">
-            {HIGHLIGHTS.map((item) => (
-              <li key={item.label} className="about__highlight">
-                <span className="about__highlight-label">{item.label}</span>
-                <span className="about__highlight-value">{item.value}</span>
-              </li>
-            ))}
-          </ul>
+      <div className="about__grid">
+        <div className="about__left">
+          <div className="about__content">
+            <p className="about__paragraph">
+              I'm Laís Rodrigues Lopes. I live in Barcelona, Spain. I've always
+              been passionate about technology and the creative possibilities of
+              the web. For me, building applications is both a mental exercise and
+              a way to bring ideas to life — sometimes to solve real problems,
+              sometimes to see how far I can push myself to learn something new.
+            </p>
+
+            <p className="about__paragraph">
+              I enjoy working with modern stacks like React, TypeScript, Ruby on
+              Rails, and Node.js. My approach is guided by clean architecture,
+              usability, and writing code that's easy to maintain. I also like to
+              experiment and try things out, even if the result isn't always
+              perfect. I believe that every project, big or small, is a chance to
+              learn and improve.
+            </p>
+
+            <p className="about__paragraph">
+              As a full-stack developer, I take pride in crafting applications that
+              are intuitive and enjoyable to use. This portfolio is a collection of
+              my work and learning journey — if you're curious too, or just want to
+              chat about tech, feel free to connect!
+            </p>
+          </div>
+
+          <div className="about__social">
+            <a
+              href="https://www.linkedin.com/in/devlaisrodrigues/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="about__social-link"
+              aria-label="LinkedIn profile"
+            >
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/laisrod"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="about__social-link"
+              aria-label="GitHub profile"
+            >
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <div className="about__tags">
-          <h3 className="about__tags-title">Tech I work with</h3>
-          <div className="about__tag-list">
-            {TECH_TAGS.map((tag) => (
-              <Badge key={tag} variant="default">{tag}</Badge>
-            ))}
+        <div className="about__right">
+          <div className="about__avatar">
+            <span className="about__avatar-text" aria-hidden="true">LR</span>
           </div>
         </div>
       </div>
