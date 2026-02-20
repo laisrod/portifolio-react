@@ -4,14 +4,14 @@
 
 .project-card {
   background-color: transparent;
-  border: 1px solid #333333;
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: border-color var(--transition-fast);
 }
 
 .project-card:hover {
-  border-color: #555555;
+  border-color: var(--color-border-hover);
 }
 
 /* Image area */

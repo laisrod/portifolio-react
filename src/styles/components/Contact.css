@@ -3,7 +3,7 @@
    ============================================ */
 
 .contact {
-  background-color: #1a1a1a;
+  background-color: var(--color-bg-secondary);
 }
 
 /* Grid: info left, form right */
@@ -60,22 +60,22 @@
   padding: 0.75rem var(--space-md);
   font-family: var(--font-mono);
   font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
-  background-color: #333333;
-  border: 1px solid #444444;
+  color: var(--color-text-primary);
+  background-color: var(--color-input-bg);
+  border: 1px solid var(--color-input-border);
   border-radius: var(--radius-sm);
   transition: border-color var(--transition-fast);
 }
 
 .contact__input::placeholder,
 .contact__textarea::placeholder {
-  color: #777777;
+  color: var(--color-text-tertiary);
 }
 
 .contact__input:focus,
 .contact__textarea:focus {
   outline: none;
-  border-color: #666666;
+  border-color: var(--color-border-hover);
 }
 
 .contact__textarea {
@@ -90,8 +90,8 @@
   font-family: var(--font-mono);
   font-size: var(--font-size-sm);
   font-weight: 700;
-  color: #1a1a1a;
-  background-color: #e0e0e0;
+  color: var(--color-bg-primary);
+  background-color: var(--color-text-primary);
   border: none;
   border-radius: var(--radius-sm);
   cursor: pointer;
@@ -99,7 +99,7 @@
 }
 
 .contact__submit:hover {
-  background-color: #ffffff;
+  opacity: 0.85;
   transform: translateY(-1px);
 }
 
