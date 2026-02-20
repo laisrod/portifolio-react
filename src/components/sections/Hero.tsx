@@ -6,50 +6,66 @@ function Hero() {
   const h1Ref = useRef<HTMLHeadingElement>(null)
 
   const [springs, api] = useSpring(() => ({
-    x: 0,
-    y: 0,
-    opacity: 0,
+    x: 550,
+    y: 200,
+    active: 0,
     config: { mass: 1, tension: 280, friction: 40 },
   }))
 
-  const handleMouseMove = useCallback(
-    (e: React.MouseEvent<HTMLElement>) => {
+  const updateSpot = useCallback(
+    (clientX: number, clientY: number) => {
       const h1 = h1Ref.current
       if (!h1) return
       const rect = h1.getBoundingClientRect()
       api.start({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top,
-        opacity: 1,
+        x: clientX - rect.left,
+        y: clientY - rect.top,
+        active: 1,
       })
     },
     [api]
   )
 
-  const handleMouseLeave = useCallback(() => {
-    api.start({ opacity: 0 })
+  const hideSpot = useCallback(() => {
+    api.start({ active: 0 })
   }, [api])
+
+  /* Mouse handlers */
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent<HTMLElement>) => updateSpot(e.clientX, e.clientY),
+    [updateSpot]
+  )
+
+  /* Touch handlers */
+  const handleTouchMove = useCallback(
+    (e: React.TouchEvent<HTMLElement>) => {
+      const touch = e.touches[0]
+      if (touch) updateSpot(touch.clientX, touch.clientY)
+    },
+    [updateSpot]
+  )
 
   return (
     <section
       className="hero"
       id="hero"
       onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
+      onMouseLeave={hideSpot}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={hideSpot}
     >
       <div className="hero__overlay" aria-hidden="true" />
       <div className="container hero__container">
-        {/* Spotlight layer — radial gold gradient clipped to text */}
         <animated.h1
           className="hero__statement"
           ref={h1Ref}
           style={{
             backgroundImage: to(
-              [springs.x, springs.y, springs.opacity],
-              (x, y, o) =>
-                o > 0.1
-                  ? `radial-gradient(circle 400px at ${x}px ${y}px, #d4a853 0%, #b8892e 25%, #1a1a1a 70%)`
-                  : `radial-gradient(circle 400px at 50% 50%, #1a1a1a 0%, #1a1a1a 100%)`
+              [springs.x, springs.y, springs.active],
+              (x, y, a) =>
+                a > 0.1
+                  ? `radial-gradient(circle 350px at ${x}px ${y}px, #d4a853 0%, #b8892e 30%, #1a1a1a 75%)`
+                  : `linear-gradient(135deg, #d4a853 0%, #a67825 30%, #3a3a3a 60%, #1a1a1a 100%)`
             ),
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
@@ -58,15 +74,6 @@ function Hero() {
         >
           I enjoy building applications for the fun and challenge of it
         </animated.h1>
-
-        {/* Static fallback for mobile (no mouse) */}
-        <h1 className="hero__statement hero__statement--mobile" aria-hidden="true">
-          I enjoy <span className="hero__statement--gold">building</span>{' '}
-          <span className="hero__statement--gold">applications</span> for the{' '}
-          <span className="hero__statement--gold">fun</span>{' '}
-          <span className="hero__statement--gold">and</span>{' '}
-          <span className="hero__statement--gold">challenge</span> of it
-        </h1>
 
         <div className="hero__bottom">
           <div className="hero__info">
