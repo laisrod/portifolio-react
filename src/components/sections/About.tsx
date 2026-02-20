@@ -1,4 +1,5 @@
 import SectionWrapper from '../layout/SectionWrapper'
+import avatarImg from '../../assets/images/portifolioeu.jpg'
 
 function About() {
   return (
@@ -60,9 +61,14 @@ function About() {
         </div>
 
         <div className="about__right">
-          <div className="about__avatar">
-            <span className="about__avatar-text" aria-hidden="true">LR</span>
-          </div>
+          <img
+            src={avatarImg}
+            alt="Laís Rodrigues Lopes"
+            className="about__avatar"
+            loading="lazy"
+            width="200"
+            height="200"
+          />
         </div>
       </div>
     </SectionWrapper>
