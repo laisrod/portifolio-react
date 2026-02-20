@@ -1,0 +1,29 @@
+/* ============================================
+   Main CSS entry point
+   Imports all base styles and component styles.
+   ============================================ */
+
+/* ---- Base ---- */
+@import './base/variables.css';
+@import './base/reset.css';
+@import './base/typography.css';
+
+/* ---- UI primitives ---- */
+@import './components/Button.css';
+@import './components/Card.css';
+@import './components/Badge.css';
+@import './components/SectionWrapper.css';
+
+/* ---- Layout ---- */
+@import './components/Header.css';
+@import './components/ThemeToggle.css';
+@import './components/Footer.css';
+
+/* ---- Sections ---- */
+@import './components/Hero.css';
+@import './components/About.css';
+@import './components/Skills.css';
+@import './components/ProjectCard.css';
+@import './components/Projects.css';
+@import './components/ProjectLinks.css';
+@import './components/Contact.css';

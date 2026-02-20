@@ -1,0 +1,21 @@
+/* ============================================
+   Projects Block (BEM)
+   ============================================ */
+
+.projects {
+  background-color: var(--color-bg-secondary);
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+}
