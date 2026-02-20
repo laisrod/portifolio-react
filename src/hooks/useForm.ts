@@ -3,19 +3,18 @@ import type { FormEvent, ChangeEvent } from 'react'
 
 interface UseFormOptions<T> {
   initialValues: T
-  onSubmit: (values: T) => void
+  onSubmit: (values: T) => void | Promise<void>
 }
 
-/**
- * Lightweight form-state hook.
- * Manages field values, a change handler factory, and submit logic.
- */
+
 export function useForm<T extends Record<string, string>>({
   initialValues,
   onSubmit,
 }: UseFormOptions<T>) {
   const [values, setValues] = useState<T>(initialValues)
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleChange =
     (field: keyof T) =>
@@ -23,12 +22,22 @@ export function useForm<T extends Record<string, string>>({
       setValues((prev) => ({ ...prev, [field]: e.target.value }))
     }
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    onSubmit(values)
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 4000)
+    setSending(true)
+    setError(null)
+
+    try {
+      await onSubmit(values)
+      setSubmitted(true)
+      setValues(initialValues)
+      setTimeout(() => setSubmitted(false), 5000)
+    } catch {
+      setError('Failed to send. Please try again.')
+    } finally {
+      setSending(false)
+    }
   }
 
-  return { values, handleChange, handleSubmit, submitted } as const
+  return { values, handleChange, handleSubmit, submitted, sending, error } as const
 }
