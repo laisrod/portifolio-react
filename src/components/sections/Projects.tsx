@@ -34,14 +34,15 @@ const PROJECTS: ProjectData[] = [
   },
   {
     title: 'Brazilian Cinema: Movie Discovery Platform',
-    year: '2024',
+    year: '2025',
     description:
-      'A responsive movie discovery app for Brazilian films built with React 18, Redux Toolkit, and Firebase Auth. Users can explore movies with advanced filters, infinite scroll, secure authentication, and role-based protected routes.',
+      'A movie discovery platform for Brazilian cinema with a Netflix-inspired login, movie poster mosaic, and redesigned Register/Welcome pages. Built with React 18, Redux Toolkit, and Firebase Auth. Features infinite scroll, advanced filters, watch providers integration, movie detail pages, and role-based protected routes — all powered by the TMDb API.',
     techs: [
       'React 18',
       'TypeScript',
       'Redux Toolkit',
       'Vite',
+      'React Router v6',
       'Firebase Auth',
       'TMDb API',
       'Storybook',
