@@ -7,49 +7,20 @@ interface ProjectCardProps {
 function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="project-card">
-      <div className="project-card__image">
-        <div className="project-card__image-placeholder" aria-hidden="true">
-          <svg
-            width="48"
-            height="48"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-            <line x1="8" y1="21" x2="16" y2="21" />
-            <line x1="12" y1="17" x2="12" y2="21" />
-          </svg>
-        </div>
-
-        <a
-          href={project.demoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-card__zoom"
-          aria-label={`View demo of ${project.title}`}
-        >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-          >
-            <circle cx="11" cy="11" r="8" />
-            <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            <line x1="11" y1="8" x2="11" y2="14" />
-            <line x1="8" y1="11" x2="14" y2="11" />
-          </svg>
-        </a>
-      </div>
+      <a
+        href={project.demoUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="project-card__image"
+        aria-label={`View demo of ${project.title}`}
+      >
+        <img
+          src={project.imageUrl}
+          alt={project.imageAlt}
+          className="project-card__img"
+          loading="lazy"
+        />
+      </a>
 
       <div className="project-card__content">
         <h3 className="project-card__title">{project.title}</h3>

@@ -2,6 +2,10 @@ import SectionWrapper from '../layout/SectionWrapper'
 import ProjectCard from '../common/ProjectCard'
 import type { ProjectData } from '../../types'
 
+import palevaImg from '../../assets/images/paleva.png'
+import brazilianCinemaImg from '../../assets/images/brazilian-cinema.png'
+import constellationImg from '../../assets/images/constellation.png'
+
 const PROJECTS: ProjectData[] = [
   {
     title: 'PaLeva: Full-Stack Restaurant Management',
@@ -11,6 +15,7 @@ const PROJECTS: ProjectData[] = [
     techs: [
       'React 19',
       'TypeScript',
+      'Ruby on Rails',
       'Vite',
       'React Router v7',
       'CSS / BEM',
@@ -23,6 +28,7 @@ const PROJECTS: ProjectData[] = [
     ],
     repoUrl: 'https://github.com/laisrod/PaLeva',
     demoUrl: 'https://pa-leva.vercel.app/login',
+    imageUrl: palevaImg,
     imageAlt: 'PaLeva restaurant management application screenshot',
     featured: true,
   },
@@ -45,6 +51,7 @@ const PROJECTS: ProjectData[] = [
     ],
     repoUrl: 'https://github.com/laisrod/S7-BrazilianFilms',
     demoUrl: 'https://s7-brazilian-films.vercel.app/',
+    imageUrl: brazilianCinemaImg,
     imageAlt: 'Brazilian Cinema movie discovery application screenshot',
     featured: false,
   },
@@ -66,6 +73,7 @@ const PROJECTS: ProjectData[] = [
     ],
     repoUrl: 'https://github.com/laisrod/constellation',
     demoUrl: 'https://nicolienvansanten.nl/',
+    imageUrl: constellationImg,
     imageAlt: 'Constellation family therapy website screenshot',
     featured: false,
   },

@@ -11,6 +11,7 @@ export interface ProjectData {
   techs: string[]
   repoUrl: string
   demoUrl: string
+  imageUrl: string
   imageAlt: string
   featured?: boolean
 }
