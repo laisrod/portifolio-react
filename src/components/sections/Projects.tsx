@@ -3,7 +3,7 @@ import ProjectCard from '../common/ProjectCard'
 import type { ProjectData } from '../../types'
 
 import palevaImg from '../../assets/images/paleva.png'
-import brazilianCinemaImg from '../../assets/images/brazilian-cinema.png'
+import brazilianCinemaImg from '../../assets/images/brazilian-cinema.jpg'
 import constellationImg from '../../assets/images/constellation.png'
 
 const PROJECTS: ProjectData[] = [
