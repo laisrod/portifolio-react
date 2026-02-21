@@ -48,17 +48,27 @@ const PROJECTS: ProjectData[] = [
     imageAlt: 'Brazilian Cinema movie discovery application screenshot',
     featured: false,
   },
-  // TODO: Add project 3
-  // {
-  //   title: 'Project Name',
-  //   year: '2025',
-  //   description: 'Short description of the project.',
-  //   techs: ['React', 'TypeScript'],
-  //   repoUrl: 'https://github.com/laisrod/project-name',
-  //   demoUrl: 'https://project-name.vercel.app/',
-  //   imageAlt: 'Project screenshot',
-  //   featured: false,
-  // },
+  {
+    title: 'Constellation: Family Constellations Therapy',
+    year: '2025',
+    description:
+      'A responsive single-page website for a family constellation therapy practice. Features scroll-based navigation, animated sections with WOW.js, filterable portfolio gallery with CubePortfolio, client testimonials carousel with Owl Carousel, embedded Google Maps, and a contact form powered by Formspree.',
+    techs: [
+      'HTML5',
+      'CSS3',
+      'Bootstrap 4',
+      'jQuery',
+      'WOW.js',
+      'Owl Carousel',
+      'CubePortfolio',
+      'Formspree',
+      'Google Maps',
+    ],
+    repoUrl: 'https://github.com/laisrod/constellation',
+    demoUrl: 'https://nicolienvansanten.nl/',
+    imageAlt: 'Constellation family therapy website screenshot',
+    featured: false,
+  },
   // TODO: Add project 4
   // {
   //   title: 'Project Name',
