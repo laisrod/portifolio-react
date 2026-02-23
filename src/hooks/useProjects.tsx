@@ -5,6 +5,7 @@ import brazilianCinemaImg from '../assets/images/brazilian-cinema.jpg'
 import constellationImg from '../assets/images/constellation.png'
 import jokesAppImg from '../assets/images/jokes-app.jpg'
 import budgetsAppImg from '../assets/images/budgets-app.jpg'
+import roseShopImg from '../assets/images/rose-shop.jpg'
 
 const PROJECTS: ProjectData[] = [
   {
@@ -54,6 +55,25 @@ const PROJECTS: ProjectData[] = [
     demoUrl: 'https://s7-brazilian-films.vercel.app/',
     imageUrl: brazilianCinemaImg,
     imageAlt: 'Brazilian Cinema movie discovery application screenshot',
+    featured: false,
+  },
+  {
+    title: 'Rose Shop: E-commerce Store',
+    year: '2026',
+    description:
+      'An ongoing fullstack online store with a minimalist, editorial-style UI. The frontend features route-based navigation, category filters, a side cart drawer, product detail pages, and a checkout flow. The backend is built with Ruby on Rails in API mode, including models for Products, Orders, and Order Items with CORS configuration. The design emphasizes clean typography, generous spacing, and a fluid shopping experience.',
+    techs: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'Ruby on Rails',
+      'CSS',
+      'REST API',
+    ],
+    repoUrl: 'https://github.com/laisrod/E-commerce',
+    demoUrl: 'https://e-commerce-two-blue-36.vercel.app/',
+    imageUrl: roseShopImg,
+    imageAlt: 'Rose Shop e-commerce store screenshot',
     featured: false,
   },
   {
