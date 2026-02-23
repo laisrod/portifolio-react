@@ -24,12 +24,69 @@
   margin-bottom: var(--space-3xl);
 }
 
-/* Grid — 2x2 for 4 projects */
+/* Grid — 2 columns */
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-xl);
   max-width: 900px;
+}
+
+/* Each project item wrapper */
+.projects__item {
+  opacity: 1;
+}
+
+/* ---- Fade-in reveal animation ---- */
+@keyframes projectReveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projects__item--reveal {
+  animation: projectReveal 0.5s ease forwards;
+}
+
+/* ---- "View all" toggle button ---- */
+.projects__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-3xl);
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.projects__toggle:hover {
+  color: #f5c518;
+  border-color: #f5c518;
+  transform: translateY(-2px);
+}
+
+/* Chevron icon */
+.projects__toggle-icon {
+  transition: transform var(--transition-base);
+}
+
+.projects__toggle-icon--flipped {
+  transform: rotate(180deg);
 }
 
 /* Responsive */
