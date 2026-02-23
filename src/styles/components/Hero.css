@@ -63,7 +63,7 @@
   color: #1a1a1a;
   max-width: 1100px;
   margin-bottom: auto;
-  padding-top: var(--space-3xl);
+  padding-top: var(--space-md);
 }
 
 /* Spotlight radius smaller on mobile */
