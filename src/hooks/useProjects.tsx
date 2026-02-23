@@ -4,6 +4,7 @@ import palevaImg from '../assets/images/paleva.png'
 import brazilianCinemaImg from '../assets/images/brazilian-cinema.jpg'
 import constellationImg from '../assets/images/constellation.png'
 import jokesAppImg from '../assets/images/jokes-app.jpg'
+import budgetsAppImg from '../assets/images/budgets-app.jpg'
 
 const PROJECTS: ProjectData[] = [
   {
@@ -95,6 +96,28 @@ const PROJECTS: ProjectData[] = [
     demoUrl: 'https://joke-web-app-69n6.vercel.app/',
     imageUrl: jokesAppImg,
     imageAlt: 'Jokes App interactive web application screenshot',
+    featured: false,
+  },
+  {
+    title: 'Budgets: Digital Services Budget Calculator',
+    year: '2025',
+    description:
+      'A single-page application for simulating budgets for digital services like SEO, advertising, and website creation. Built with React 19, TypeScript, and Vite. Features real-time price calculation, customizable website options (pages and languages), 20% annual discount logic, persistent local storage, sortable and searchable budget history, and shareable URLs. Organized with Atomic Design and unit tested with Vitest.',
+    techs: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'React Router',
+      'Vitest',
+      'CSS3 / BEM',
+      'Atomic Design',
+      'LocalStorage',
+      'Vercel',
+    ],
+    repoUrl: 'https://github.com/laisrod/S6.Budgets-React-',
+    demoUrl: 'https://s6-budgets-react.vercel.app/',
+    imageUrl: budgetsAppImg,
+    imageAlt: 'Budgets digital services calculator application screenshot',
     featured: false,
   },
 ]
