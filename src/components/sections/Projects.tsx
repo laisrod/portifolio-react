@@ -5,6 +5,7 @@ import type { ProjectData } from '../../types'
 import palevaImg from '../../assets/images/paleva.png'
 import brazilianCinemaImg from '../../assets/images/brazilian-cinema.jpg'
 import constellationImg from '../../assets/images/constellation.png'
+import jokesAppImg from '../../assets/images/jokes-app.jpg'
 
 const PROJECTS: ProjectData[] = [
   {
@@ -78,17 +79,26 @@ const PROJECTS: ProjectData[] = [
     imageAlt: 'Constellation family therapy website screenshot',
     featured: false,
   },
-  // TODO: Add project 4
-  // {
-  //   title: 'Project Name',
-  //   year: '2025',
-  //   description: 'Short description of the project.',
-  //   techs: ['React', 'TypeScript'],
-  //   repoUrl: 'https://github.com/laisrod/project-name',
-  //   demoUrl: 'https://project-name.vercel.app/',
-  //   imageAlt: 'Project screenshot',
-  //   featured: false,
-  // },
+  {
+    title: 'Jokes App: Productivity with Humor',
+    year: '2025',
+    description:
+      'An interactive web app that displays random jokes from two external APIs (icanhazdadjoke and Chuck Norris API) with automatic fallback if one source is unavailable. Users can rate each joke with emojis (😒 😐 😂), and the app shows real-time weather based on browser geolocation using Open-Meteo and BigDataCloud APIs.',
+    techs: [
+      'TypeScript',
+      'REST APIs',
+      'Jest',
+      'Geolocation API',
+      'Service Architecture',
+      'CSS3',
+      'Vercel',
+    ],
+    repoUrl: 'https://github.com/laisrod/Joke-Web-App',
+    demoUrl: 'https://joke-web-app-69n6.vercel.app/',
+    imageUrl: jokesAppImg,
+    imageAlt: 'Jokes App interactive web application screenshot',
+    featured: false,
+  },
 ]
 
 function Projects() {
