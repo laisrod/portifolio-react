@@ -28,6 +28,7 @@
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: stretch;
   gap: var(--space-xl);
   max-width: 900px;
 }
@@ -35,6 +36,7 @@
 /* Each project item wrapper */
 .projects__item {
   opacity: 1;
+  height: 100%;
 }
 
 /* ---- Fade-in reveal animation ---- */
