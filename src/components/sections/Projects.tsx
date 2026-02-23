@@ -52,7 +52,7 @@ function Projects() {
           aria-expanded={showAll}
         >
           <span className="projects__toggle-text">
-            {showAll ? 'Show less' : `View all projects (${hiddenCount} more)`}
+            {showAll ? 'Show less' : `See more projects`}
           </span>
           <svg
             className={`projects__toggle-icon ${showAll ? 'projects__toggle-icon--flipped' : ''}`}
