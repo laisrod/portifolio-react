@@ -96,6 +96,7 @@ function Hero() {
                 <path d="M16 11.37a4 4 0 1 1-1.7-1.7 4 4 0 0 1 1.7 1.7z" />
                 <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" />
               </svg>
+              <span className="hero__social-text">@winewithsimo</span>
             </a>
           </div>
         </div>

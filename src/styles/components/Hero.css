@@ -116,9 +116,12 @@
 .hero__social-link {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
+  justify-content: flex-start;
+  gap: 0.45rem;
+  width: auto;
+  min-width: 40px;
   height: 40px;
+  padding-inline: 0.7rem;
   border-radius: var(--radius-md);
   color: var(--color-text-tertiary);
   border: 1px solid var(--color-border);
@@ -126,6 +129,13 @@
   transition: color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
   position: relative;
   z-index: 5;
+}
+
+.hero__social-text {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .hero__social-link:hover {
