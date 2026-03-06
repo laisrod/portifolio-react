@@ -10,7 +10,7 @@ function CrossGrid() {
     <section className="cross-grid" aria-hidden="true">
       <div className="cross-grid__container">
         {crosses.map((_, i) => (
-          <span key={i} className="cross-grid__item">+</span>
+          <span key={i} className="cross-grid__item">o</span>
         ))}
       </div>
     </section>

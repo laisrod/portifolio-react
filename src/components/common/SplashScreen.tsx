@@ -10,8 +10,7 @@ function SplashScreen({ visible }: SplashScreenProps) {
     >
       <div className="splash__grid" aria-hidden="true" />
       <p className="splash__text">
-        Hi, I'm <span className="splash__name">Laís</span>. Welcome To My
-        Portfolio
+        Bem-vindo ao universo dos vinhos de <span className="splash__name">Simona</span>
       </p>
     </div>
   )
