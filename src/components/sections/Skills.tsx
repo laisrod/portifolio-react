@@ -3,7 +3,7 @@ import SectionWrapper from '../layout/SectionWrapper'
 function Skills() {
   return (
     <SectionWrapper id="skills" className="skills">
-      <h2 className="skills__title">O que voce vai aprender</h2>
+      <h2 className="skills__title">What you will learn</h2>
 
       <div className="skills__content">
         <p className="skills__paragraph">

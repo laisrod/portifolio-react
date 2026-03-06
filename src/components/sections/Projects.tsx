@@ -112,7 +112,7 @@ function Projects() {
 
   return (
     <SectionWrapper id="projects" className="projects">
-      <h2 className="projects__title">Modulos e Experiencias</h2>
+      <h2 className="projects__title">Modules and Experiences</h2>
 
       <p className="projects__intro">
         Uma jornada completa com aulas, degustacoes guiadas, recomendacoes e

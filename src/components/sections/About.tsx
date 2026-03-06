@@ -4,7 +4,7 @@ import avatarImg from '../../assets/images/portifolioeu.jpg'
 function About() {
   return (
     <SectionWrapper id="about" className="about">
-      <h2 className="about__title">Sobre a Simona</h2>
+      <h2 className="about__title">About Simona</h2>
 
       <div className="about__grid">
         <div className="about__left">

@@ -32,7 +32,7 @@ function Contact() {
     <SectionWrapper id="contact" className="contact">
       <div className="contact__grid">
         <div className="contact__info">
-          <h2 className="contact__title">Inscricao e Contato</h2>
+          <h2 className="contact__title">Subscription and Contact</h2>
           <p className="contact__text">
             Quer participar do curso da Simona ou tirar duvidas sobre as aulas?
             Envie sua mensagem e receba as proximas datas, valores e detalhes do
