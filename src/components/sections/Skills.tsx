@@ -7,23 +7,19 @@ function Skills() {
 
       <div className="skills__content">
         <p className="skills__paragraph">
-          O curso combina teoria essencial e pratica guiada para desenvolver seu
-          paladar de forma estruturada. Voce aprende a analisar aparencia, aromas
-          e sabor com metodo, entendendo como identificar estilos e qualidade.
+        I share tasting techniques, food-pairing tips, and practical criteria to help you choose 
+        wines with more confidence in everyday situations—whether for a dinner at home, a gift, 
+        or building a small personal wine collection. The course combines essential theory and 
+        guided practice to help you develop your palate in a structured way. I guide you through 
+        how to analyze a wine’s appearance, aromas, and flavor using a clear method, so you can better 
+        identify different styles and levels of quality.
         </p>
 
         <p className="skills__paragraph">
-          Simona apresenta tecnicas de degustacao, dicas de harmonizacao e
-          criterios para escolher vinhos com mais seguranca no dia a dia, seja
-          para jantar em casa, presentear ou montar uma pequena adega pessoal.
+        My goal is for you to finish the course feeling confident to taste, talk about, and choose each
+         bottle more thoughtfully. 🍷
         </p>
 
-        <p className="skills__paragraph">
-          Tambem exploramos regioes marcantes como Lanzarote, nas Ilhas Canarias,
-          com foco em contexto, tipicidade e recomendacoes reais. O objetivo e
-          que voce saia do curso confiante para degustar, conversar e escolher
-          melhor cada garrafa.
-        </p>
       </div>
     </SectionWrapper>
   )

@@ -79,8 +79,8 @@ function Hero() {
         <div className="hero__bottom">
           <div className="hero__info">
             <p className="hero__name">Simona</p>
-            <p className="hero__title">Criadora de Conteudo Digital sobre Vinhos</p>
-            <Badge variant="status">Inscricoes Abertas</Badge>
+            <p className="hero__title">Wine Lover with WSET L3</p>
+            <Badge variant="status">Registrations Open</Badge>
           </div>
 
           <div className="hero__social">

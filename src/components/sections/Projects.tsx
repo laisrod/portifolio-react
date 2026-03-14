@@ -148,7 +148,7 @@ function Projects() {
                   />
                 </figure>
               ))}
-            </div>
+          </div>
           </button>
         ))}
       </div>
@@ -177,12 +177,12 @@ function Projects() {
 
               {activePhoto && (
                 <div className="projects__modal-viewer">
-                  <button
-                    type="button"
+        <button
+          type="button"
                     className="projects__modal-nav projects__modal-nav--prev"
                     onClick={goToPreviousPhoto}
                     aria-label="Foto anterior"
-                  >
+        >
                     ‹
                   </button>
 
@@ -197,7 +197,7 @@ function Projects() {
                     aria-label="Proxima foto"
                   >
                     ›
-                  </button>
+        </button>
                 </div>
               )}
 
@@ -207,7 +207,7 @@ function Projects() {
             </div>
           </div>,
           document.body
-        )}
+      )}
     </SectionWrapper>
   )
 }

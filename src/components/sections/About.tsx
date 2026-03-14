@@ -10,26 +10,15 @@ function About() {
         <div className="about__left">
           <div className="about__content">
             <p className="about__paragraph">
-              Simona e certificada com merito no WSET Nivel 3 pela WSET Global
-              e compartilha sua paixao por vinhos de forma acessivel e elegante.
-              Como criadora de conteudo digital, ela transforma temas tecnicos em
-              experiencias praticas para quem quer aprender degustacao com
-              seguranca e prazer.
+            I am certified with merit in WSET Level and I share my passion for wine in an accessible and
+            elegant way. As a digital content creator, I transform technical topics into practical 
+            experiences for those who want to learn wine tasting with confidence and enjoyment.
             </p>
 
             <p className="about__paragraph">
-              Seu trabalho destaca especialmente vinhos de regioes como Lanzarote,
-              nas Ilhas Canarias, conectando terroir, historia e harmonizacao em
-              uma linguagem leve. O curso foi pensado para iniciantes e
-              entusiastas que desejam desenvolver paladar, vocabulario e olhar
-              critico.
-            </p>
-
-            <p className="about__paragraph">
-              No conteudo, voce encontra fotos e videos de vinhos, degustacoes,
-              eventos e recomendacoes com curadoria cuidadosa. A proposta e
-              inspirar amigos e alunos a descobrirem novos rotulos e criar memorias
-              em cada taca.
+            I also love creating personalized wine tastings, thoughtfully designed according to the 
+            level of experience and interests of each group, so that every tasting becomes both 
+            educational and enjoyable. 🍷
             </p>
           </div>
 

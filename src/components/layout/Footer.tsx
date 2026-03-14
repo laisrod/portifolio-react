@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <div className="container footer__container">
         <p className="footer__text">
-          &copy; {currentYear} Simona. Curso e conteudo digital sobre vinhos.
+          &copy; {currentYear} Simona. Course and digital content about wines.
         </p>
         <div className="footer__links">
           <a
