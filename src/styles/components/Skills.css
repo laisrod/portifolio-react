@@ -7,7 +7,7 @@
 /* Title with terminal ./ prefix */
 .skills__title {
   font-family: var(--font-display);
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-section-title);
   font-weight: 700;
   color: var(--color-text-primary);
   margin-bottom: var(--space-2xl);
@@ -25,7 +25,7 @@
 
 .skills__paragraph {
   font-family: var(--font-sans);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-section-body);
   color: var(--color-text-secondary);
   line-height: 1.8;
   margin-bottom: var(--space-xl);
