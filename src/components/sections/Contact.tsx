@@ -2,7 +2,7 @@ import SectionWrapper from '../layout/SectionWrapper'
 import { useForm } from '../../hooks/useForm'
 import type { ContactFormValues } from '../../types'
 
-const FORMSPREE_ID = 'mwvnnjjn'
+const FORMSPREE_ID = 'xojkrzvv'
 
 function Contact() {
   const { values, handleChange, handleSubmit, submitted, sending, error } =
