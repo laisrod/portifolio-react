@@ -34,21 +34,19 @@ function Contact() {
         <div className="contact__info">
           <h2 className="contact__title">Subscription and Contact</h2>
           <p className="contact__text">
-            Quer participar do curso da Simona ou tirar duvidas sobre as aulas?
-            Envie sua mensagem e receba as proximas datas, valores e detalhes do
-            programa completo.
+            Would you like to participate in Simona's tastings or have questions about the classes? Send us a message and receive further information, pricing, and details of the complete program.
           </p>
         </div>
 
         <form className="contact__form" onSubmit={handleSubmit}>
           <div className="contact__field">
-            <label htmlFor="contact-name" className="contact__label">Nome</label>
+            <label htmlFor="contact-name" className="contact__label">Name</label>
             <input
               id="contact-name"
               type="text"
               name="name"
               className="contact__input"
-              placeholder="Seu nome"
+              placeholder="Your name"
               required
               value={values.name}
               onChange={handleChange('name')}
@@ -62,7 +60,7 @@ function Contact() {
               type="email"
               name="email"
               className="contact__input"
-              placeholder="Seu email"
+              placeholder="Your email"
               required
               value={values.email}
               onChange={handleChange('email')}
@@ -70,12 +68,12 @@ function Contact() {
           </div>
 
           <div className="contact__field">
-            <label htmlFor="contact-message" className="contact__label">Mensagem</label>
+            <label htmlFor="contact-message" className="contact__label">Menssage</label>
             <textarea
               id="contact-message"
               name="message"
               className="contact__textarea"
-              placeholder="Conte um pouco sobre seu interesse no curso"
+              placeholder="Tell me a little about your interest in the course."
               rows={6}
               required
               value={values.message}
@@ -88,12 +86,12 @@ function Contact() {
             className="contact__submit"
             disabled={sending || submitted}
           >
-            {sending ? 'Enviando...' : submitted ? 'Mensagem enviada com sucesso' : 'Quero me inscrever'}
+            {sending ? 'Sending...' : submitted ? 'Message sent successfully' : 'Send'}
           </button>
 
           {submitted && (
             <p className="contact__success" role="status">
-              Mensagem enviada com sucesso! Em breve voce recebe um retorno.
+              Message sent successfully! You will receive a reply soon.
             </p>
           )}
 

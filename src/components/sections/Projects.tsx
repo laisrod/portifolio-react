@@ -26,8 +26,8 @@ import galery4Img6 from '../../assets/images/galery4/Screenshot from 2026-03-06 
 
 const PHOTO_GALLERIES = [
   {
-    title: 'Galeria 1 - Degustacoes',
-    description: 'Momentos de degustacao guiada e analise sensorial.',
+    title: 'Abruzzo wine tasting',
+    description: 'Montepulciano, Pecorino grape varieties only 10 minutes far away from Adriatic coast.',
     photos: [
       { src: galery1Img1, alt: 'Foto da galeria 1 - degustacao 1' },
       { src: galery1Img2, alt: 'Foto da galeria 1 - degustacao 2' },
@@ -37,8 +37,8 @@ const PHOTO_GALLERIES = [
     ],
   },
   {
-    title: 'Galeria 2 - Aulas e Comunidade',
-    description: 'Aulas praticas, encontros e troca de experiencias.',
+    title: 'Sudtirol wine tasting',
+    description: 'Gewurtraminer, Sauvignon Blanc, Lagrein grape varieties surrounded by Dolomites mountains.',
     photos: [
       { src: galery2Img1, alt: 'Foto da galeria 2 - aula 1' },
       { src: galery2Img2, alt: 'Foto da galeria 2 - aula 2' },
@@ -48,8 +48,8 @@ const PHOTO_GALLERIES = [
     ],
   },
   {
-    title: 'Galeria 3 - Eventos',
-    description: 'Eventos especiais, harmonizacoes e roteiros de vinho.',
+    title: 'Catalunya wine tasting',
+    description: 'Cava, Garnatxa, Syrah at their best.',
     photos: [
       { src: galery3Img1, alt: 'Foto da galeria 3 - eventos 1' },
       { src: galery3Img2, alt: 'Foto da galeria 3 - eventos 2' },
@@ -60,8 +60,8 @@ const PHOTO_GALLERIES = [
     ],
   },
   {
-    title: 'Galeria 4 - Recomendacoes',
-    description: 'Rotulos selecionados, dicas e conteudos exclusivos.',
+    title: 'Wine tastings at home',
+    description: 'Vertical wine tasting with same grape variety in different regions of the world.',
     photos: [
       { src: galery4Img1, alt: 'Foto da galeria 4 - recomendacoes 1' },
       { src: galery4Img2, alt: 'Foto da galeria 4 - recomendacoes 2' },
@@ -113,12 +113,7 @@ function Projects() {
 
   return (
     <SectionWrapper id="projects" className="projects">
-      <h2 className="projects__title">Modules and Experiences</h2>
-
-      <p className="projects__intro">
-        Uma jornada completa com aulas, degustacoes guiadas, recomendacoes e
-        vivencias para elevar seu conhecimento sobre vinhos com leveza e profundidade.
-      </p>
+      <h2 className="projects__title">Gallery</h2>
 
       <div className="projects__galleries">
         {PHOTO_GALLERIES.map((gallery, index) => (

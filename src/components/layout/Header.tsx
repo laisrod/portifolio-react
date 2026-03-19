@@ -9,10 +9,10 @@ interface HeaderProps {
 }
 
 const NAV_LINKS: NavLink[] = [
-  { href: '#about', label: 'Sobre' },
-  { href: '#skills', label: 'Curso' },
-  { href: '#projects', label: 'Modulos' },
-  { href: '#contact', label: 'Contato' },
+  { href: '#about', label: 'About' },
+  { href: '#skills', label: 'Experiences' },
+  { href: '#projects', label: 'Gallery' },
+  { href: '#contact', label: 'Contact me' },
 ]
 
 function Header({ theme, toggleTheme }: HeaderProps) {

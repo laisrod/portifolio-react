@@ -13,21 +13,21 @@ function Footer() {
             className="footer__link"
             aria-label="Sobre"
           >
-            Sobre
+            About
           </a>
           <a
             href="#projects"
             className="footer__link"
             aria-label="Modulos"
           >
-            Modulos
+            Gallery
           </a>
           <a
             href="mailto:simona.vinhos@email.com"
             className="footer__link"
             aria-label="Email"
           >
-            Email
+            Contact me
           </a>
         </div>
       </div>
