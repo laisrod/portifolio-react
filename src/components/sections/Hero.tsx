@@ -1,6 +1,5 @@
 import { useRef, useCallback } from 'react'
 import { useSpring, animated, to } from '@react-spring/web'
-import Badge from '../ui/Badge'
 
 function Hero() {
   const h1Ref = useRef<HTMLHeadingElement>(null)
@@ -80,7 +79,6 @@ function Hero() {
           <div className="hero__info">
             <p className="hero__name">Simona</p>
             <p className="hero__title">Wine Lover with WSET L3</p>
-           {/* <Badge variant="status">Registrations Open</Badge>*/}
           </div>
         
 
